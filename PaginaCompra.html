@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+npm install -g firebase-tools
+firebase login
+firebase init
+firebase deploy
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Tech</title>
+  <link rel="stylesheet" href="df.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Tienda Tech</h1>
+      <div class="bienvenida" id="mensajeBienvenida"></div>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Reseñas</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="text">
+        <h2>Gafas Inteligentes X200</h2>
+        <p>Las gafas del futuro: Control por voz, cámara 4K, integración total con tu smartphone y mucho más.</p>
+        <span class="price">Proximamente...</span>
+        <button>Comprar ahora</button>
+      </div>
+      <div class="image">
+        <img src="Glasses.jpg" alt="Gafas X200">
+      </div>
+    </div>
+  </section>
+
+  <center>
+  <section class="features container">
+    <h3>Especificaciones Destacadas</h3>
+    <ul>
+      <li>🔋 Batería de hasta 24 horas</li>
+      <li>📸 Cámara 4K con visión nocturna</li>
+      <li>🎧 Audio espacial con micrófono integrado</li>
+      <li>📱 Compatible con iOS y Android</li>
+      <li>🌐 Conectividad Wi-Fi y Bluetooth 5.2</li>
+    </ul>
+  </section>
+</center>
+
+
+  <section class="reviews container">
+    <h3>Reseñas de Usuarios</h3>
+    <div class="review">
+      <p>⭐⭐⭐⭐⭐ "¡Sorprendido con la calidad! Me siento en una película de ciencia ficción."</p>
+      <span>- Alejandra V.</span>
+    </div>
+    <div class="review">
+      <p>⭐⭐⭐⭐ "Gran producto, aunque me gustaría más colores. ¡Funciona de maravilla!"</p>
+      <span>- Pancho B.</span>
+    </div>
+  </section>
+
+  <section class="contact container">
+    <h3>¿Tienes dudas?</h3>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tienda Tech. Todos los derechos reservados.</p>
+  </footer>
+</body>
+<script>
+  const nombreUsuario = localStorage.getItem('nombreUsuario');
+
+  if (nombreUsuario) {
+    const mensajeDiv = document.getElementById('mensajeBienvenida');
+    mensajeDiv.textContent = `👋 Bienvenido, ${nombreUsuario}`;
+    mensajeDiv.style.padding = '20px';
+    mensajeDiv.style.textAlign = 'center';
+    mensajeDiv.style.fontSize = '1.2em';
+    mensajeDiv.style.backgroundColor = '#dbeafe';
+    mensajeDiv.style.borderBottom = '2px solid #0a74da';
+  }
+</script>
+</html>
